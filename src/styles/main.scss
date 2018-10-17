@@ -1,0 +1,23 @@
+@import'./node_modules/reset-css/sass/reset';
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+@import'./fonts.scss';
+
+$color-hover-text: #c7b299;
+
+@mixin title-medium($size) {
+    font-family: 'Raleway';
+    font-size: $size;
+    font-weight: 500;
+}
+
+
+@mixin montserrat($size: 14px, $weight: normal){
+    font-family: 'Montserrat';
+    font-size: $size;
+    font-weight: $weight;
+}
+
+.default-option{
+    @include montserrat(34px, 300);
+    color: #8c8c8c;
+}
