@@ -1,5 +1,8 @@
 @import'./node_modules/reset-css/sass/reset';
-@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+@import'./node_modules/et-line/style';
+$fa-font-path: '~font-awesome/fonts/';
+@import './node_modules/font-awesome/scss/font-awesome';
 @import'./fonts.scss';
 
 $color-hover-text: #c7b299;
@@ -20,4 +23,11 @@ $color-hover-text: #c7b299;
 .default-option{
     @include montserrat(34px, 300);
     color: #8c8c8c;
+}
+
+.text{
+    font-family: 'Ubuntu';
+    font-weight: normal;
+    font-style: italic;
+    color: blue;
 }
