@@ -5,29 +5,23 @@ $fa-font-path: '~font-awesome/fonts/';
 @import './node_modules/font-awesome/scss/font-awesome';
 @import'./fonts.scss';
 
-$color-hover-text: #c7b299;
-
-@mixin title-medium($size) {
-    font-family: 'Raleway';
-    font-size: $size;
-    font-weight: 500;
-}
+$color-primary: #939598; //color for content
+$color-primary-alt: #4c4c4c; //for title element
+$color-secondary: #1abc9c; //for hover, span, etc.
 
 
-@mixin montserrat($size: 14px, $weight: normal){
-    font-family: 'Montserrat';
+@mixin ubuntu-font($size: 14px, $weight: normal){
+    font-family: 'Ubuntu';
     font-size: $size;
     font-weight: $weight;
 }
 
 .default-option{
-    @include montserrat(34px, 300);
-    color: #8c8c8c;
+    @include ubuntu-font(34px, 300);
+    color: $color-primary;
 }
 
-.text{
-    font-family: 'Ubuntu';
-    font-weight: normal;
-    font-style: italic;
-    color: blue;
+.alt-text{
+    color: $color-secondary;
 }
+
