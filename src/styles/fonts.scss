@@ -1,4 +1,6 @@
-// @import'./et-line-font.css';
+@import'./node_modules/et-line/style';
+$fa-font-path: '~font-awesome/fonts/';
+@import './node_modules/font-awesome/scss/font-awesome';
 
 @font-face {
     font-family: 'Ubuntu';

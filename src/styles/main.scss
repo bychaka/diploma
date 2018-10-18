@@ -1,8 +1,4 @@
 @import'./node_modules/reset-css/sass/reset';
-
-@import'./node_modules/et-line/style';
-$fa-font-path: '~font-awesome/fonts/';
-@import './node_modules/font-awesome/scss/font-awesome';
 @import'./fonts.scss';
 
 $color-primary: #939598; //color for content
@@ -17,7 +13,7 @@ $color-secondary: #1abc9c; //for hover, span, etc.
 }
 
 .default-option{
-    @include ubuntu-font(34px, 300);
+    @include ubuntu-font(14px, 300);
     color: $color-primary;
 }
 
