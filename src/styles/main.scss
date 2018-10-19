@@ -21,3 +21,10 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     color: $color-secondary;
 }
 
+.vimeo-video{
+    position: relative;
+    width: 556px;
+    height: 314px;
+    background: url('./images/video-image.png') no-repeat;
+}
+
