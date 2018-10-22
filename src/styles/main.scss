@@ -1,23 +1,1478 @@
 @import'./node_modules/reset-css/sass/reset';
-@import url('../node_modules/font-awesome/css/font-awesome.min.css');
 @import'./fonts.scss';
 
-$color-hover-text: #c7b299;
-
-@mixin title-medium($size) {
-    font-family: 'Raleway';
-    font-size: $size;
-    font-weight: 500;
-}
+$color-primary: #939598; //color for content
+$color-primary-alt: #4c4c4c; //for title element
+$color-secondary: #1abc9c; //for hover, span, etc.
 
 
-@mixin montserrat($size: 14px, $weight: normal){
-    font-family: 'Montserrat';
+@mixin ubuntu-font($size: 14px, $weight: normal){
+    font-family: 'Ubuntu';
     font-size: $size;
     font-weight: $weight;
 }
 
 .default-option{
-    @include montserrat(34px, 300);
-    color: #8c8c8c;
+    @include ubuntu-font(14px, 300);
+    color: $color-primary;
 }
+
+.alt-text{
+    color: $color-secondary;
+}
+
+.container{
+    display: flex;
+    margin: 0 14.2%;
+}
+
+.row-wrap-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 105px 15px 50px 15px;
+}
+
+.section-icon {
+    font-size: 63px;
+    margin-bottom: 46px;
+}
+
+.subtitle{
+    color: #a5a5a5;
+    @include ubuntu-font(14px, bold);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 0.245em;
+}
+
+.title{
+    @include ubuntu-font(61px, 300);
+    text-transform: capitalize;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.form-input{
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    width: 220px;
+    line-height: 48px;
+    padding: 0 36px;
+    @include ubuntu-font(18px, normal);
+    color: #929292;
+    &::placeholder{
+        color: #929292;
+    }
+}
+
+.form-btn{
+    min-width: 160px;
+    @include ubuntu-font(18px, 300);
+    background-color: $color-secondary;
+    color: #fff;
+    line-height: 50px;
+    padding: 0 36px;
+    border: none;
+    cursor: pointer;
+}
+
+.item-title{
+    color: $color-primary-alt;
+    @include ubuntu-font(27px, normal);
+}
+
+.item-text{
+    @include ubuntu-font(16px, normal);
+}
+
+.upper{
+    text-transform: uppercase !important;
+}
+
+.text-bolder{
+    font-weight: bold;
+}
+
+/*=============================================
+=            HEADER            =
+=============================================*/
+
+.banner-video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #7a7a7a;
+    color: #fff;
+    padding: 100px 15px 85px 15px;
+    .subtitle{
+        color: inherit;
+    }
+    .title{
+        font-size: 56px;
+        margin-bottom: 38px;
+        text-transform: initial;
+    }
+}
+
+.banner-video-description{
+    @include ubuntu-font(24px, 300);
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.video-icon{
+    font-size: 120px;
+    color: #fff;
+    margin-bottom: 90px;
+}
+
+.subscribe-form{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.banner-video-text{
+    text-align: center;
+    font-size: 16px;
+    line-height: 27px;
+    .alt-text{
+        text-decoration: none;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+/*=====  navigation  ======*/
+
+.navigation{
+    height: 60px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.19);
+
+    .container{ 
+        width: 1140px;
+        margin: 0 auto;
+        height: 100%;   
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .logo{
+        margin-right: 30px;
+    }
+}
+
+.toogle{
+    display: none;
+}
+
+.nav-link{
+    @include ubuntu-font(15px, normal);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #a69999;
+    margin-right: 29px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.nav-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 11px;
+    height: 48px;
+    width: 138px;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    font-size: 27px;
+    .fa-facebook{
+        color: #3b5998;
+    }
+    .fa-twitter{
+        color: #00aced;
+    }
+}
+
+/*=====  End of HEADER  ======*/
+
+
+/*=============================================
+=            Service            =
+=============================================*/
+
+.service{
+    border-bottom: 1px solid #dddddd;
+}
+
+.service-item{
+    width: 370px;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    .item-title{
+        margin-bottom: 32px;
+    }
+    .icon-mobile{
+        color: #4796b7;
+    }
+    .icon-presentation{
+        color: #9f5cd8;
+    }
+    .icon-lightbulb{
+        color: #f1438a;
+    }
+}
+
+.service-item-icon{
+    font-size: 69px;
+    margin-bottom: 40px;
+}
+
+
+
+/*=====  End of Service  ======*/
+
+
+/*=============================================
+=     our contents            =
+=============================================*/
+
+.contents-slider{
+    display: flex;
+    flex-direction: row;
+}
+
+.slider-inner{
+    min-width: 750px;
+    height: 500px;
+    background-color: #f4f4f4;
+    position: relative;
+    margin-right: 30px;
+}
+
+.contents-slider-indicator{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    right: 18px;
+    .slider-indicator{
+        display: block;
+        margin-bottom: 16px;
+        border-radius: 50%;
+        height: 11px;
+        width: 11px;
+        background-color: $color-secondary;
+        &:hover, &:active{
+            background-color: #000;
+        }
+    }
+    .slider-indicator-active{
+        background-color: #000;
+    }
+}
+
+.slider-description-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360px;
+}
+
+.slider-description{
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #fff;
+    box-shadow: 0 0 2px 1px #e1e2e4;
+}
+
+.slider-description-item{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e1e2e4;
+    color: #000;
+}
+
+.item-header-subtitle{
+    @include ubuntu-font(14px, 400);
+    text-transform: uppercase;
+    letter-spacing: 0.245em;
+    margin-bottom: 16px;
+}
+
+.item-header-title{
+    @include ubuntu-font(10px, 400);
+    text-transform: uppercase;
+    letter-spacing: 0.315em;
+}
+
+.slider-description-active{
+    .slider-description-item-header{
+        border-bottom: 1px solid #e1e2e4;
+    }
+    .item-header-subtitle{
+        @include ubuntu-font(10px, 400);
+    }
+    .item-header-title{
+        @include ubuntu-font(20px, 400);
+    }
+}
+
+.slider-description-item-header{
+    padding: 20px 20px 30px 20px;
+}
+
+.slider-description-item-text{
+    padding: 20px 20px 25px 20px;
+    @include ubuntu-font(14px, 400);
+    line-height: 26px;
+}
+
+.slider-description-text{
+    font-size: 16px;
+    line-height: 27px;
+}
+
+/*=====  our contents  ======*/
+
+
+
+/*=============================================
+=            Provide            =
+=============================================*/
+
+.provide{
+    background-color: #f7f7f7;
+    padding: 120px 0 70px 0;
+    .row-wrap-items{
+        flex-wrap: wrap;
+    }
+    .container{
+        margin: 0 5%;
+    }
+}
+
+.provide-item{
+    display: flex;
+    flex-direction: column;
+    min-width: 360px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px 1px #e1e2e4;
+    position: relative;
+    margin: 0 30px 30px 0;
+    &:hover{
+        .provide-item-title{
+            font-weight: bold;
+        }
+        .provide-item-hover{
+            transition: 0.3s;
+            top: 85px;
+            opacity: 1;
+        }
+    }
+
+    .icon-mobile{
+        color: #a56bd3;
+    }
+    .icon-tools{
+        color: #f1438a;
+    }
+    .icon-lightbulb{
+        color: #aed066;
+    }
+    .icon-video{
+        color: #ac5c5c;
+    }
+}
+
+.provide-item-hover{
+    transition: 0.3s;
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    background-color: #f7f7f7;
+}
+
+.provide-item-active{
+    .provide-item-title{
+        font-weight: bold;
+    }
+}
+
+.provide-item-icon{
+    align-self: center;
+    font-size: 66px;
+    margin-bottom: 30px;
+}
+
+.provide-item-title{
+    @include ubuntu-font(27px, 400);
+    margin-bottom: 52px;
+    text-transform: capitalize;
+    color: $color-primary-alt;
+}
+
+.provide-hover-link{
+    display: block;
+    line-height: 38px;
+    @include ubuntu-font(16px, 300);
+    color: inherit;
+    padding-left: 17px;
+    text-transform: capitalize;
+    text-decoration: none;
+    box-shadow: 2px 2px 2px 0 #e1e2e4;
+    margin-bottom: 4px;
+    &:hover{
+        background-color: #f2f2f2;
+    }
+}
+
+/*=====  End of Provide  ======*/
+
+
+/*=============================================
+=            Features            =
+=============================================*/
+
+.features{
+    padding-bottom: 145px;
+    .container{
+        margin: 0;
+        width: 1145px;
+    }
+}
+
+.features-nav{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 115px;
+}
+
+.features-nav-item{
+    display: block;
+    line-height: 55px;
+    @include ubuntu-font(16px, 400);
+    color: #777;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 7px;
+    padding: 0 40px;
+    border-radius: 2px 2px 0 0;
+    background-color: #fff;
+    box-shadow: 0 0 7px 1px #d8d8d6;
+    transition: 0.3s;
+    &:last-child{
+        margin-right: 0;
+    }
+    &:hover{
+        background-color: $color-secondary;
+        color: #fff;
+    }
+}
+
+.features-video{
+    display: flex;
+    align-items: center;
+    margin-right: 125px;
+}
+
+.video{
+    width: 566px;
+    height: 314px;
+    display:inline-block; 
+}
+
+.features-video-content{
+    padding-top: 60px;
+}
+
+.video-content-title{
+    @include ubuntu-font(27px, 300);
+    line-height: 29px;
+    letter-spacing: 0.0016em;
+    color: $color-primary-alt;
+    width: 305px;
+    margin-bottom: 27px;
+}
+
+.video-content-text{
+    font-size: 16px;
+    line-height: 27px;
+}
+/*=====  End of Features  ======*/
+
+
+/*======================={======================
+=            Works            =
+=============================================*/
+
+.works{
+    padding: 0;
+}
+
+.section-works-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 84%;
+    margin: 0 auto;
+    padding-top: 100px;
+    background-color: #f8f9fb;
+}
+
+.works-nav{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+
+.works-nav-item{
+    display: block;
+    line-height: 41px;
+    @include ubuntu-font(18px, 400);
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-right: 8px;
+    padding: 0 23px;
+    background-color: $color-secondary;
+    transition: 0.3s;
+    &:last-child{
+        margin-right: 0;
+    }
+    &:hover{
+        background-color: #000;
+    }
+}
+
+.works-gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.works-gallery-item{
+    position: relative;
+    width: 25%;
+    height: 266px;
+    &:nth-child(1){
+        background-color: #fdbd4f;
+    }
+    &:nth-child(2){
+        background-color: #b8c496;
+    }
+    &:nth-child(3){
+        background-color: #65bcd0;
+    }
+    &:nth-child(4){
+        background-color: #d7f0ed;
+    }
+    &:nth-child(5){
+        background-color: #e0eaf3;
+    }
+    &:nth-child(6){
+        background-color: #d2c2b3;
+    }
+    &:nth-child(7){
+        background-color: #e5e4e2;
+    }
+    &:nth-child(8){
+        background-color: #ffc301;
+    }
+    &:hover{
+        .gallery-item-hover{
+            transition: 0.3s;
+            opacity: 1;
+            transform: translateY(-70px);
+        }
+        .gallery-item-description{
+            opacity: 1;
+        }
+    }
+}
+
+
+.gallery-item-hover{
+    height: 100%;
+    transition: 0.3s;
+    opacity: 0;
+    background: url(./images/gallery-item-bg.png) no-repeat;
+    background-position: center;
+}
+
+.gallery-item-description{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: #252830;
+    color: #fff;
+    padding: 14px 16px 20px 16px;
+    box-sizing: border-box;
+
+    .description-title, .description-autor{
+        font-size: 17px;
+    }
+
+    .description-title{
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+
+}
+
+.tags-wrap{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.tag-item{
+    display: block;
+    line-height: 22px;
+    @include ubuntu-font(13px, 400);
+    color: $color-secondary;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-right: 4px;
+    padding: 0 7px;
+    background-color: #f2ede8;
+    cursor: pointer;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+
+/*=====  End of Works  ======*/
+
+
+/*=============================================
+=            team            =
+=============================================*/
+
+.member-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.member-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    padding: 5px 0 35px 0;
+    width: 360px;
+    transition: 0.3s;
+    &:hover{
+        transition: 0.3s;
+        box-shadow: 0 0 17px 1px #e0e0de;
+    }
+}
+
+.member-item-image{
+    width: 260px;
+    height: 480px;
+    background-color: #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.member-item-title{
+    @include ubuntu-font(27px);
+    text-transform: capitalize;
+    margin-bottom: 17px;
+    color: $color-primary-alt;
+}
+
+.member-item-subtitle{
+    @include ubuntu-font(19px);
+    color: $color-primary;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.member-item-social-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+    .fa-facebook{
+        color: #627aad;
+    }
+    .fa-twitter{
+        color: #33bdf1;
+    }
+    .fa-facebook{
+        color: #3395c5;
+    }
+}
+
+.social-link{
+    margin-right: 35px;
+    &:last-child{
+        margin-right: 0;;
+    }
+}
+
+/*=====  End of team  ======*/
+
+
+/*=============================================
+=            new-features            =
+=============================================*/
+
+.new-features{
+    background-color: #f9f9f9;
+    padding: 80px 0 75px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-block{
+    min-width: 533px;
+    min-height: 471px;
+    padding-right: 45px;
+    background: url(./images/new-features-bg.png) no-repeat;
+}
+
+.content-block{
+    display: flex;
+    flex-direction: column;
+    max-width: 533px;
+    padding: 0 15px;
+}
+
+.content-block-title{
+    @include ubuntu-font(33px, bold);
+    color: $color-primary-alt;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.content-block-subtitle{
+    @include ubuntu-font(33px, normal);
+    margin-bottom: 27px;
+}
+
+.content-block-text{
+    font-size: 15px;
+    color: #c1b0b3;
+    margin-bottom: 65px;
+}
+
+.list-group-wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #c1b0b3;
+    margin-bottom: 90px;
+}
+
+.list-item{
+    color: #8d7a7a;
+    @include ubuntu-font(16px, normal);
+    line-height: 32px;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 50%;
+    .fa{
+        margin-right: 10px;
+    }
+}
+
+.content-block-link-group{
+    display: flex;
+    flex-direction: row;
+}
+
+.content-block-link{
+    display: block;
+    line-height: 51px;
+    padding: 0 41px;
+    @include ubuntu-font(15px, 400);
+    color: #afb0b3;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        background-color: #010101;
+        color: #fff;
+        transition: 0.3s;
+    }
+}
+
+/*=====  End of new-features  ======*/
+
+
+/*=============================================
+=            Opinion            =
+=============================================*/
+
+.opinion{
+    color: #fff;
+    background-color: #141519;
+    padding: 76px 0 87px 0;
+}
+
+.opinion-title{
+    @include ubuntu-font(27px, 400);
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+
+.opinion-item-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.opinion-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+}
+
+.opinion-item-icon{
+    font-size: 47px;
+    margin-bottom: 17px;
+}
+
+.opinion-item-count{
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.opinion-item-text{
+    @include ubuntu-font(18px, 300); 
+    text-transform: capitalize;
+}
+
+/*=====  End of Opinion  ======*/
+
+
+/*=============================================
+=            subscribe            =
+=============================================*/
+
+.subscribe{
+    padding: 89px 0;
+    background-color: #f1f1ef;
+    align-items: flex-end;
+}
+
+.subscribe-content-wrap{
+    display: flex;
+    flex-direction: column;
+    padding-left: 110px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.subscribe-title{
+    font-size: 46px;
+    text-transform: capitalize;
+    color: $color-primary-alt;
+    margin-bottom: 28px;
+}
+
+.suscribe-form{
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 460px;
+}
+
+.subscribe-form-btn{
+    position: absolute;
+    right: 20px;
+    background-color: unset;
+    border: none;
+    line-height: 45px;
+    font-size: 28px;
+    color: $color-secondary;
+    cursor: pointer;
+}
+
+.subscribe-form-input{
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 45px;
+    padding: 0 60px 0 13px;
+    @include ubuntu-font(14px, 300);
+    border: none;
+    color: #c3c7d1;
+    &::placeholder{
+        color: #c3c7d1;
+    }
+}
+
+.subscribe-text{
+    font-size: 16px;
+    line-height: 30px;
+    width: 444px;
+}
+
+/*=====  End of subscribe  ======*/
+
+
+/*=============================================
+=            Buy now            =
+=============================================*/
+
+.buy-now{
+    padding: 90px 0 78px 0;
+    .subtitle{
+        letter-spacing: initial;
+        margin-bottom: 65px;
+    }
+    .logo{
+        margin-bottom: 66px;
+    }
+    .title{
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    .buy-now-text{
+        @include ubuntu-font(16px, 400);
+        font-style: italic;
+        margin-bottom: 54px;
+    }
+
+}
+
+
+.btn{
+    @include ubuntu-font(16px, 300);
+    line-height: 50px;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 0 40px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.btn-primary{
+    background-color: $color-secondary;
+    color: #fff;
+    &:hover{
+        background-color: #fff;
+        outline: 1px solid $color-secondary;
+        color: $color-secondary;
+    }
+}
+
+/*=====  End of Buy now  ======*/
+
+
+/*=============================================
+=            Deal            =
+=============================================*/
+
+.deal{
+    padding: 136px 0 105px 0;
+    background-color: #f8f9fb;
+}
+
+.plan-group{
+    @extend .member-group;
+    margin-bottom: 15px;
+}
+
+.deal-more{
+    font-size: 15px;
+}
+
+.deal-more-link{
+    color: $color-secondary;
+    text-decoration: none;
+}
+
+.plan-item{
+    @extend .member-item;
+    padding: 45px 0 40px 0;
+    .btn{
+        margin-bottom: 32px;
+    }
+}
+
+.plan-item-title{
+    color: $color-primary-alt;
+    @include ubuntu-font(20px, 400);
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+
+.plan-item-price{
+    @include ubuntu-font(29px, 400);
+    height: 124px;
+    width: 124px;
+    text-align: center;
+    line-height: 124px;
+    border-radius: 50%;
+    margin-bottom: 26px;
+    box-shadow: 0 0 0 1px #dedede, 0 0 0 2px #fff, 0 0 0 3px #dedede;
+
+}
+
+.plan-item-active{
+    background-color: $color-secondary;
+    color: #fff;
+    .plan-item-title, .plan-item-option, .plan-item-text{
+        color: inherit;
+    }
+    .plan-item-price{
+        box-shadow: 0 0 0 1px #dedede, 0 0 0 2px $color-secondary, 0 0 0 3px #dedede;
+    }
+    .btn-primary{
+        background-color: #fff;
+        color: $color-secondary;
+        &:hover{
+            background-color: $color-secondary;
+            outline: 1px solid #fff;
+            color: #fff;
+        }
+    }
+}
+
+.plan-item-period{
+    @include ubuntu-font(16px, 300);
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.plan-item-option{
+    @include ubuntu-font(16px, 400);
+    color: $color-primary-alt;
+    margin-bottom: 25px;
+}
+
+.plan-item-text{
+    @include ubuntu-font(16px, 400);
+    color: #928b8b;
+    line-height: 27px;
+}
+
+
+/*=====  End of Deal  ======*/
+
+
+/*=============================================
+=            download            =
+=============================================*/
+
+.download{
+    padding: 90px 0;
+    .title{
+        font-size: 57px;
+        margin-bottom: 25px;
+    }
+}
+
+.download-description{
+    margin-bottom: 60px;
+    @include ubuntu-font(16px, 400);
+}
+
+.download-btn-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.download-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #222222;
+    color: #fff;
+    margin-right: 15px;
+    height: 69px;
+    cursor: pointer;
+}
+
+.download-btn-icon{
+    font-size: 41px;
+    padding: 15px 15px 15px 20px;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.download-btn-link{
+    display: block;
+    padding: 0 22px 0 7px;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Myriad Pro';
+    font-weight: 300;
+}
+
+.download-btn-link-from{
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+.download-btn-link-name{
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+/*=====  End of download  ======*/
+
+
+/*=============================================
+=            Review            =
+=============================================*/
+
+.review{
+    padding: 100px 0 80px 0;
+    background-color: #a5a5a5;
+}
+
+.review-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-client-avatar{
+    margin-bottom: 45px;
+}
+
+.review-star-group{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 45px;
+}
+
+.star-link{
+    color: #ffb74d;
+    font-size: 16.61px;
+    margin-right: 5px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.review-text{
+    color: #fff;
+    text-align: center;
+    @include ubuntu-font(16px, 400);
+    line-height: 27px;
+    margin-bottom: 40px;
+}
+
+.client-twitter-name{
+    .fa-twitter{
+        color: #00aced;
+        margin-right: 6px;
+    }
+    @extend .review-text;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 85px;
+}
+
+.review-slider-indicator-group{
+    display: flex;
+    flex-direction: row;
+    .review-slider-indicator{
+        display: block;
+        margin-right: 25px;
+        &:last-child{
+            margin-right: 0;
+        }
+        border-radius: 50%;
+        height: 11px;
+        width: 11px;
+        background-color: $color-secondary;
+        &:hover, &:active, &.review-slider-indicator-active{
+            background-color: #000;
+        }
+    }
+}
+
+/*=====  End of Review  ======*/
+
+
+/*=============================================
+=            Partners            =
+=============================================*/
+
+.partners{
+    background-color: #f9f9f9;
+    padding: 80px 15px 70px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners-item{
+    color: $color-secondary;
+    @include ubuntu-font(27px, 400);
+    text-decoration: none;
+    margin-right: 50px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+/*=====  End of partners  ======*/
+
+
+/*=============================================
+=            contact-us            =
+=============================================*/
+
+.contact-us{
+    padding: 120px 15px 50px 15px;
+}
+
+.contact-form{
+    width: 623px;
+    .form-input{
+        margin-bottom: 15px;
+        width: 296px;
+        &.input-name{
+            margin-right: 27px;
+        }
+        &.input-subject{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    .form-btn{
+        text-transform: capitalize;
+    }
+}
+
+.form-textarea{
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    height: 200px;
+    line-height: 50px;
+    padding: 0 36px;
+    @include ubuntu-font(18px, normal);
+    color: #929292;
+    &::placeholder{
+        color: #929292;
+    }
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.contact-us-map{
+    padding-left: 43px;
+}
+
+/*=====  End of contact-us  ======*/
+
+
+/*=============================================
+=            Section contact-info            =
+=============================================*/
+
+.contact-info{
+    background-color: #f7f7f7;
+    width: 84%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 46px 0 50px 0;
+}
+
+.contact-info-block{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    margin-right: 130px;
+    &::after{
+        content:'';
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 122px;
+        top: 5px;
+        right: -65px;
+        background-color: #818181;
+    }
+    &:last-child{
+        margin-right: 0;
+        &::after{
+            display: none;
+        }
+    }
+}
+
+.contact-block-icon{
+    font-size: 42px;
+    color: $color-primary-alt;
+    margin-bottom: 25px;
+}
+
+.contact-block-title{
+    margin-bottom: 22px;
+    @include ubuntu-font(18px, bold);
+    text-transform: uppercase;
+    color: $color-primary-alt;
+}
+
+.contact-block-text{
+    color: $color-primary-alt;
+    @include ubuntu-font(18px, 300);
+}
+
+.contact-block-link{
+    @include ubuntu-font(19px, 300);
+    color: $color-secondary;
+    text-decoration: none;
+}
+
+/*=====  End of Section contact-info  ======*/
+
+
+/*=============================================
+=            Purchase            =
+=============================================*/
+
+.purchase{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $color-secondary;
+    padding: 45px 8% 50px 8%;
+    color: #fff;
+}
+
+.purchase-content{
+    margin-right: 190px;
+}
+
+.purchase-title{
+    margin-bottom: 15px;
+    @include ubuntu-font(47px, 300);
+}
+
+.purchase-text{
+    font-size: 16px;
+}
+
+.btn-primary-alt{
+    height: 50px;
+    line-height: 50px;
+    background-color: $color-secondary;
+    outline: 1px solid #fff;
+    color: #fff;
+    &:hover{
+        background-color: #fff;
+        color: $color-secondary;
+    }
+}
+
+/*=====  End of Purchase  ======*/
+
+
+/*=============================================
+=            Footer            =
+=============================================*/
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252830;
+    padding: 50px 8% 40px 8%;
+    color: #fff;
+    .logo{
+        margin-right: 20px;
+    }
+}
+
+.copyright-block-content{
+    line-height: 27px;
+    @include ubuntu-font(16px, 400);
+}
+
+.footer-copyright-block{
+    display: flex;
+    align-items: center;
+}
+
+.designed-autor{
+    color: $color-secondary;
+    text-decoration: none;
+}
+
+.footer-social-link{
+    font-size: 27px;
+    margin-right: 15px;
+    &:last-child{
+        margin-right: 30px;
+    }
+    .fa-facebook{color: #374f83}
+    .fa-twitter{color: #0792c7}
+    .fa-dribbble{color: #c34577}
+    .fa-behance{color: #1a5cd6}
+    .fa-google{color: #b84437}
+    .fa-linkedin{color: #076a9b}
+    .fa-instagram{color: #486e8d}
+    .fa-pinterest{color: #aa2229}
+    .fa-flickr{color: #d30873}
+
+}
+
+/*=====  End of Footer  ======*/
+
+
+
+/* import media */
+
+
+@import'./mobile.scss';
+@import'./tablet.scss';

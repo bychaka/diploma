@@ -13,49 +13,50 @@ module.exports = {
     },
     watch:true,
     module: {
-      rules: [{
-        test: /\.(woff|woff2|eot|ttf)$/,
-        use: [
-                {
-                    loader: 'file-loader?name=./styles/fonts/[name].[ext]'
-                }
-              ]
-        },
-        {test: /\.(gif|png|jpe?g|svg)$/i,
-          use: [
-            'file-loader',
-            {
-              loader: 'image-webpack-loader',
-              options: {
-                bypassOnDebug: true, // webpack@1.x
-                disable: true, // webpack@2.x and newer
-                mozjpeg: {
-                  progressive: true,
-                  quality: 75
-                },
-                // optipng.enabled: false will disable optipng
-                optipng: {
-                  enabled: false,
-                },
-                pngquant: {
-                  quality: '65-90',
-                  speed: 4
-                },
-              },
-            },
-          ],
-        },
-          
+      rules: [
+        
         {
-          test: /\.css$/,
-          use: [ 'style-loader', 'css-loader' ]
+          test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+          loader: 'url-loader?limit=10000',
         },
+        // {test: /\.(gif|png|jpe?g|svg)$/i,
+        //   use: [
+        //     'file-loader',
+        //     {
+        //       loader: 'image-webpack-loader',
+        //       options: {
+        //         bypassOnDebug: true, // webpack@1.x
+        //         disable: true, // webpack@2.x and newer
+        //         mozjpeg: {
+        //           progressive: true,
+        //           quality: 75
+        //         },
+        //         // optipng.enabled: false will disable optipng
+        //         optipng: {
+        //           enabled: false,
+        //         },
+        //         pngquant: {
+        //           quality: '65-90',
+        //           speed: 4
+        //         },
+        //       },
+        //     },
+        //   ],
+        // },
+          
+        // {
+        //   test: /\.css$/,
+        //   use: [ 'style-loader', 'css-loader' ]
+        // },
         
         {test: /\.scss$/,
         use: [{
           loader: "style-loader"
         }, {
-          loader: "css-loader"
+          loader: "css-loader",
+          options: {
+            includePaths: []
+          }
         }, {
           loader: 'postcss-loader',
           options: {
