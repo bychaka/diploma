@@ -1,4 +1,4 @@
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 641px) and (max-width: 1024px){
 
     @mixin column(){
         flex-direction: column;
@@ -9,8 +9,8 @@
     }
     
     .row-wrap-items{
-        flex-direction: column;
-    }
+        flex-wrap: wrap;
+        }
 
     .title{
         font-size: 40px;
@@ -20,20 +20,9 @@
         font-size: 18px;
     }
 
-    .subscribe-form{
-        width: 100%;
-        flex-direction: column;
-        .form-input{
-            width: inherit;
-            margin-bottom: 15px;
-        }
-        .form-btn{
-            width: inherit;
-        }
-    }
-
     .contents-slider{
         @include column();
+        width: 80%;
     }
 
     .slider-inner{
@@ -41,14 +30,20 @@
         margin-bottom: 15px;
     }
 
+    .slider-description-wrap{
+        width: 100%;
+    }
+
     .slider-description{
         margin-bottom: 15px;
+        width: 100%;
     }
 
-    .provide-item{
-        margin-right: 0;
+    .provide{
+        .container{
+            max-width: 100%;
+        }
     }
-
 
     .container{
         margin: 0;
@@ -68,15 +63,6 @@
                 margin-right: 0;
             }
         }
-    }
-
-    .features-nav{
-        flex-wrap: wrap;
-        justify-content: center;
-        .features-nav-item{
-            margin-bottom: 8px;
-        }
-
     }
 
     .video-content-title{
@@ -103,6 +89,10 @@
         width: 50%;
     }
 
+    .gallery-item-hover{
+        background-size: cover;
+    }
+
     .member-group{
         @include column();
     }
@@ -119,16 +109,13 @@
         transform: translateX(25%);
     }
 
-    .subscribe-form{
-        width: 100%;
-    }
-
     .opinion-title{
         text-align: center;
         margin-bottom: 80px;
     }
 
     .opinion-item{
+        width: 45%;
         margin-bottom: 60px;
     }
 
@@ -166,17 +153,6 @@
         margin-bottom: 50px;   
     }
 
-
-    .contact-form{
-        width: 100%; 
-        margin-bottom: 30px; 
-        .form-input{
-            width: 100%;
-        }
-        .form-btn{
-            width: 100%;
-        }
-    }
 
     .contact-info{
         @include column();
