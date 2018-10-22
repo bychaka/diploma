@@ -1,0 +1,27 @@
+@media only screen and (max-width: 640px) {
+    .title{
+        font-size: 40px;
+    }
+    .banner-video-description{
+        font-size: 18px;
+    }
+
+    .subscribe-form{
+        width: 100%;
+        flex-direction: column;
+        .form-input{
+            width: inherit;
+            margin-bottom: 15px;
+        }
+        .form-btn{
+            width: inherit;
+        }
+    }
+
+
+
+
+    .no-mobile{
+        display: none;
+    }
+}
