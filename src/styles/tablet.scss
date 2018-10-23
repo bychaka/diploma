@@ -94,13 +94,30 @@
     }
 
     .member-group{
-        @include column();
     }
 
     .member-item{
+        width: 200px;
         margin-bottom: 40px;
     }
 
+    .member-item-image{
+        width: 180px;
+        height: 300px;
+    }
+
+    .member-item-title{
+        font-size: 20px;
+    }
+
+    .member-item-subtitle{
+        font-size: 15px;
+    }
+
+    .member-item-social-group{
+        font-size: 20px;
+    }
+    
     .content-block{
         align-items: center;
     }
@@ -109,13 +126,29 @@
         transform: translateX(25%);
     }
 
+    .opinion-item-group{
+        width: 100%;
+        padding: 0 5%;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .opinion-item-count{
+        font-size: 40px;
+    }
+
     .opinion-title{
         text-align: center;
         margin-bottom: 80px;
     }
 
+    .opinion-item-text{
+        text-align: center;
+        font-size: 16px;
+    }
+
     .opinion-item{
-        width: 45%;
+        width: 23%;
         margin-bottom: 60px;
     }
 

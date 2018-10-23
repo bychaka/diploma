@@ -42,6 +42,7 @@ $color-secondary: #1abc9c; //for hover, span, etc.
 .section-icon {
     font-size: 63px;
     margin-bottom: 46px;
+    color: $color-primary-alt;
 }
 
 .subtitle{
@@ -57,6 +58,7 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     text-transform: capitalize;
     margin-bottom: 100px;
     text-align: center;
+    color: $color-primary-alt;
 }
 
 .form-input{
@@ -90,6 +92,8 @@ $color-secondary: #1abc9c; //for hover, span, etc.
 
 .item-text{
     @include ubuntu-font(16px, normal);
+    line-height: 27px;
+    color: $color-primary;
 }
 
 .upper{
@@ -119,6 +123,7 @@ $color-secondary: #1abc9c; //for hover, span, etc.
         font-size: 56px;
         margin-bottom: 38px;
         text-transform: initial;
+        color: inherit;
     }
 }
 
@@ -328,6 +333,7 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     @include ubuntu-font(10px, 400);
     text-transform: uppercase;
     letter-spacing: 0.315em;
+    color: #dddddd;
 }
 
 .slider-description-active{
@@ -339,6 +345,8 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     }
     .item-header-title{
         @include ubuntu-font(20px, 400);
+        letter-spacing: 0.112em;
+        color: #000;
     }
 }
 
@@ -811,6 +819,8 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     width: 50%;
     .fa{
         margin-right: 10px;
+        font-size: 17px;
+        color: $color-primary-alt;
     }
 }
 
@@ -1093,6 +1103,12 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     line-height: 27px;
 }
 
+.title-alt{
+    text-transform: lowercase;
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
 
 /*=====  End of Deal  ======*/
 
@@ -1275,6 +1291,7 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     .form-input{
         margin-bottom: 15px;
         width: 296px;
+        font-size: 16px;
         &.input-name{
             margin-right: 27px;
         }
@@ -1285,6 +1302,7 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     }
     .form-btn{
         text-transform: capitalize;
+        font-size: 16px;
     }
 }
 
@@ -1294,10 +1312,12 @@ $color-secondary: #1abc9c; //for hover, span, etc.
     height: 200px;
     line-height: 50px;
     padding: 0 36px;
+    font-size: 16px;
     @include ubuntu-font(18px, normal);
     color: #929292;
     &::placeholder{
         color: #929292;
+        font-size: 16px;
     }
     width: 100%;
     margin-bottom: 70px;
